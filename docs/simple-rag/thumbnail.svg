@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="t d">
+  <title id="t">Simple RAG</title>
+  <desc id="d">Documents flow through four search methods (keyword, TF-IDF, BM25, semantic) into an answer that cites its source.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1.5 L8.5 5 L1 8.5" fill="none" stroke="#9a6a3e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="640" height="360" fill="#f4f0e7"/>
+  <rect x="10.5" y="10.5" width="619" height="339" fill="none" stroke="#2b2721" stroke-opacity=".14"/>
+
+  <g fill="none" stroke="#2b2721" stroke-linecap="round" stroke-linejoin="round">
+    <!-- documents: a small stack of pages -->
+    <g transform="translate(44 104) scale(1.22)">
+      <path d="M14 -10 h88 l18 18 v118 h-106 z" fill="#efeadf" stroke-opacity=".35" transform="rotate(-6 60 60)"/>
+      <path d="M8 -4 h88 l18 18 v118 h-106 z" fill="#f2ede3" stroke-opacity=".5" transform="rotate(-2.5 60 60)"/>
+      <path d="M0 0 h88 l18 18 v120 h-106 z" fill="#fcfaf4" stroke-width="2"/>
+      <path d="M88 0 v18 h18" stroke-width="2"/>
+      <g stroke-width="2" stroke-opacity=".5">
+        <path d="M16 38 h56"/><path d="M16 54 h72"/><path d="M16 70 h64"/>
+        <path d="M16 86 h74"/><path d="M16 102 h48"/><path d="M16 118 h66"/>
+      </g>
+      <path d="M16 70 h40" stroke="#9a6a3e" stroke-width="7" stroke-opacity=".38"/>
+    </g>
+
+    <!-- four search methods, ranked: the longest bar wins -->
+    <g stroke-width="11">
+      <path d="M334 144 h44" stroke-opacity=".18"/>
+      <path d="M334 182 h72" stroke-opacity=".18"/>
+      <path d="M334 220 h98" stroke-opacity=".18"/>
+      <path d="M334 258 h124" stroke="#9a6a3e" stroke-opacity=".8"/>
+    </g>
+
+    <!-- magnifier on the winner -->
+    <g transform="translate(478 252)" stroke-width="2.6">
+      <circle r="19" fill="#f4f0e7" fill-opacity=".55"/>
+      <path d="M14 14 l15 15" stroke-width="4"/>
+    </g>
+
+    <!-- answer bubble -->
+    <path d="M500 104 h112 a8 8 0 0 1 8 8 v86 a8 8 0 0 1 -8 8 h-64 l-18 20 l2 -20 h-32 a8 8 0 0 1 -8 -8 v-86 a8 8 0 0 1 8 -8 z" fill="#fcfaf4" stroke-width="2"/>
+
+    <!-- flow -->
+    <path d="M186 200 C 200 192, 210 192, 222 198" stroke="#9a6a3e" stroke-width="2" stroke-dasharray="1 6" marker-end="url(#arrow)"/>
+    <path d="M488 222 C 494 214, 496 210, 498 204" stroke="#9a6a3e" stroke-width="2" stroke-dasharray="1 6" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-family="'Instrument Serif', Georgia, 'Times New Roman', serif" fill="#2b2721">
+    <text x="320" y="70" text-anchor="middle" font-size="50">Simple RAG</text>
+
+    <text x="112" y="316" text-anchor="middle" font-style="italic" font-size="19" fill-opacity=".6">felines.txt</text>
+
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="14" letter-spacing="1.6" text-anchor="end" fill-opacity=".62">
+      <text x="322" y="149">KEYWORD</text>
+      <text x="322" y="187">TF-IDF</text>
+      <text x="322" y="225">BM25</text>
+      <text x="322" y="263" fill="#9a6a3e" fill-opacity="1">SEMANTIC</text>
+    </g>
+
+    <text x="556" y="138" text-anchor="middle" font-style="italic" font-size="21">up to twenty</text>
+    <text x="556" y="164" text-anchor="middle" font-style="italic" font-size="21">hours a day</text>
+    <text x="556" y="190" text-anchor="middle" font-size="15" fill="#9a6a3e">[felines.txt]</text>
+
+    <text x="320" y="334" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12.5" letter-spacing="3.4" fill-opacity=".4">RETRIEVE · AUGMENT · GENERATE</text>
+  </g>
+</svg>

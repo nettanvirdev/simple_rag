@@ -1,0 +1,28 @@
+[project]
+name = "ragi"
+version = "0.1.0"
+description = "Learn RAG from scratch: keyword search, TF-IDF, BM25, semantic search and a simple RAG, built step by step."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    { name = "nettanvirdev", email = "tanvirahamed.official@outlook.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=3.35.1",
+    "python-dotenv>=1.2.4",
+    "sentence-transformers>=6.1.0",
+]
+
+[project.scripts]
+ragi = "ragi:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
